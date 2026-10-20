@@ -1,26 +1,18 @@
-TIMESHEET MONITOR - LOCAL PACKAGE
+TIMESHEET MONITOR PWA
 
-Files:
-- index.html
-- app.js
-- manifest.json
-- service-worker.js
+This is the installable PWA package.
 
-QUICK LAPTOP USE
-1. Unzip this package.
-2. For simple browser use, open index.html.
-3. Your entries are saved in that browser's local storage.
-4. Use "Save backup" to create timesheet-data.json.
-5. Use "Load JSON" to restore or transfer your data.
+IMPORTANT: Do not open index.html directly with file:// for PWA installation. Service workers and normal PWA installation require the application to be served from localhost during laptop testing or from an HTTPS site for phone installation.
 
-OFFLINE/PWA INSTALLATION
-A service worker/PWA normally needs to be served from localhost or HTTPS, not opened only as file://.
-If Python is installed on a laptop, open a terminal in this folder and run:
-    python -m http.server 8080
-Then browse to localhost:8080.
+LOCAL LAPTOP TEST
+1. Unzip the package.
+2. Open a terminal in timesheet-monitor-pwa.
+3. If Python is available, run: python -m http.server 8080
+4. Open http://localhost:8080 in Chrome or Edge.
+5. Use the browser's install option.
 
-MOBILE
-Copy the package to a device or serve it from a local/HTTPS web server. The responsive interface works on mobile browsers. JSON import/export is the portable cross-device backup method.
+PHONE INSTALLATION
+Place these files on an HTTPS web host, open that HTTPS address on the phone, then install/add it to the Home Screen from the browser.
 
-IMPORTANT
-Keep timesheet-data.json backups. Clearing browser/site data can remove locally stored entries.
+DATA
+Timesheet entries remain local to the browser/app profile. Use Save backup to export timesheet-data.json and Load JSON to restore or move entries.
